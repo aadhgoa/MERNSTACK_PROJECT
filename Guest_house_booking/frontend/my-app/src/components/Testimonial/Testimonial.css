@@ -1,0 +1,104 @@
+/* Styles for testimonial class */
+.testimonial {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+/* Styles for testimonial_img class */
+.testimonial_img {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Adjust the gap value as needed */
+  margin-top: 0.75rem; /* Adjust the margin-top value as needed */
+}
+
+
+/* Styles for Testimon_name class */
+.Testimon_name {
+  margin-bottom: 0rem;
+  margin-top: 0.75rem; /* Adjust the margin-top value as needed */
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+/* Testimonial.css */
+
+/* Slider Container */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Testimonial Item */
+.testimonial {
+  margin: 0 10px;
+}
+
+/* Testimonial Text */
+.testimonial p {
+  text-align: center;
+}
+
+/* Testimonial Image and Info Container */
+.testimonial_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Testimonial Image */
+.testimonial_img img {
+  width: 100%;
+  height: auto;
+}
+
+/* Testimonial Info (Name and Role) */
+.Testimon_name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Arrows Navigation */
+.slick-prev,
+.slick-next {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Dots Navigation */
+.slick-dots {
+  list-style: none;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  font-size: 16px;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.slick-dots button:hover {
+  background-color: #333;
+  color: #fff;
+}

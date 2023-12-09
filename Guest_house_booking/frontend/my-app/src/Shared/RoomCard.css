@@ -1,0 +1,87 @@
+.room_img img{
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+
+
+}
+
+.card{
+  border: none !important;
+  box-shadow: rgb(0, 0, 0, 0.2) 20px 20px 60px 30px;
+
+
+}
+
+.room_img{
+  position: relative;
+}
+
+.room_img span{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: max-content;
+  height: max-content;
+  z-index: 10;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 3px 0 0 0;
+
+}
+
+.card_top span i{
+  color: var(--secondary-color);
+
+
+}
+.room_rating{
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.room_title{
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.room_title a{
+  text-decoration: none;
+  color: var(--heading-color);
+  transition: 0.3s;
+
+}
+.room_title :hover{
+  color: blue;
+}
+
+.card_bottom h5{
+  color: rgb(37, 37, 209)73, 73, 240;
+  font-size: 1.1rem;
+  font-weight: 700;
+  
+}
+ 
+.card_bottom h5 span{
+  font-weight: 500;
+  color: rgb(5, 13, 245);
+  font-size: 0.8rem;
+}
+
+.booking_btn{
+  background: rgb(85, 85, 226) !important;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem !important;
+
+}
+
+.Link{
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.Link:hover{
+  color: #fff;
+}

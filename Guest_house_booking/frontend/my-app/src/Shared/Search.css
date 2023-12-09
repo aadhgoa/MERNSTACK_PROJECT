@@ -1,0 +1,55 @@
+.Search_Bar {
+  display: flex;
+  align-items: center; /* Align items vertically in the flex container */
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  width: max-content;
+  margin-top: 50px;
+  background-color: #ffffff; /* Add a background color for better visibility */
+}
+
+.form_group {
+  margin-bottom: 1rem; /* Add some spacing between form groups */
+  display: flex;
+  align-items: center; /* Align items vertically in the flex container */
+}
+
+.form_group span {
+  font-size: 1.2rem;
+  color: #2341d7;
+}
+
+.form_group input {
+  border: none;
+  font-size: 0.9rem;
+  color: var(--heading-color);
+  font-weight: 400;
+  width: 100%; /* Make the input width 100% */
+  padding: 0.5rem; /* Add some padding for better input appearance */
+  border-radius: 8px; /* Add a slight border radius to the input */
+  background-color: #8abbec; /* Add a light background color */
+}
+
+.form_group input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.2); /* Add a subtle focus border */
+}
+
+.form_group h6 {
+  margin-bottom: 0;
+}
+
+.form_group-fast {
+  border-right: 2px solid #ddd;
+}
+
+.search_icon {
+  font-size: 1.6rem;
+  padding: 0.6rem;
+  background: var(--secondary-color);
+  color: #556eea;
+  border-radius: 10px 5px 10px 5px;
+  cursor: pointer;
+  margin-left: 0.5rem; /* Add some left margin to separate the icon from the input */
+}

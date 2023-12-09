@@ -1,0 +1,39 @@
+[
+      {
+        "id":1,
+        "Rooms": "Deluxe",
+        "adults": 2,
+        "images": "path/to/royal-suite-image-3.jpg",
+        "costPerDay": 2500,
+        "description": "Experience the epitome of luxury in our Royal Suite. This spacious and elegantly designed suite offers a breathtaking view of the surroundings. Indulge in the finest amenities and make your stay truly unforgettable.",
+        "reviews": [],
+        "featured": true
+      },
+      {  "id":2,
+        "Rooms": "Standard",
+        "adults": 2,
+        "images": "path/to/royal-suite-image-3.jpg",
+        "costPerDay": 2500,
+        "description": "Experience the epitome of luxury in our Royal Suite. This spacious and elegantly designed suite offers a breathtaking view of the surroundings. Indulge in the finest amenities and make your stay truly unforgettable.",
+        "reviews": [],
+        "featured": true
+      },
+      { "id":3,
+        "Rooms": "Standard",
+        "adults": 2,
+        "images": "path/to/royal-suite-image-3.jpg",
+        "costPerDay": 2500,
+        "description": "Experience the epitome of luxury in our Royal Suite. This spacious and elegantly designed suite offers a breathtaking view of the surroundings. Indulge in the finest amenities and make your stay truly unforgettable.",
+        "reviews": [],
+        "featured": true
+      },
+      {  "id":3,
+        "Rooms": "Deluxe",
+        "adults": 2,
+        "images": "path/to/royal-suite-image-3.jpg",
+        "costPerDay": 2500,
+        "description": "Experience the epitome of luxury in our Royal Suite. This spacious and elegantly designed suite offers a breathtaking view of the surroundings. Indulge in the finest amenities and make your stay truly unforgettable.",
+        "reviews": [],
+        "featured": true
+      }
+    ]
