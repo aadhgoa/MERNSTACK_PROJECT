@@ -12,6 +12,7 @@ const RoomData = [
     images: roomImg1,
     costPerDay: 2500,
     description: "Experience the epitome of luxury in our Deluxe Room. This spacious and elegantly designed room offers a breathtaking view of the surroundings. Indulge in the finest amenities and make your stay truly unforgettable.",
+    Maxpeople:2,
     reviews: [
       {
         name:"Jhon doe",
@@ -32,6 +33,7 @@ const RoomData = [
     images:  roomImg2, 
     costPerDay: 2500,
     description: "Experience comfort and style in our Standard Room. This well-appointed room offers a cozy ambiance and top-notch services during your stay. Immerse yourself in relaxation.",
+    Maxpeople:2,
     reviews: [],
     avgRating: 4.5,
     featured: true
@@ -42,6 +44,7 @@ const RoomData = [
     images: roomImg3,
     costPerDay: 2500,
     description: "Enjoy a delightful stay in our Standard Room. With modern amenities and a welcoming atmosphere, this room is perfect for a relaxing getaway.",
+    Maxpeople:2,
     reviews: [],
     avgRating: 4.5,
     featured: true
@@ -52,6 +55,7 @@ const RoomData = [
     images: roomImg4,
     costPerDay: 2500,
     description: "Indulge in luxury with our Deluxe Room. Experience a blend of sophistication and comfort with top-notch amenities and personalized services.",
+    Maxpeople:2,
     reviews: [],
     avgRating: 4.5,
     featured: true

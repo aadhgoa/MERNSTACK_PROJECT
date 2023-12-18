@@ -1,0 +1,18 @@
+.pagination{
+  width: 2rem;
+  height: 2rem;
+  padding: 5px;
+  border-radius: 50px;
+  display: block;
+  justify-content: center;
+  border: 1px solid #666;
+  color: black;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.active_page{
+  background: #666;
+  color: #fff !important;
+}

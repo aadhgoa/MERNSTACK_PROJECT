@@ -43,7 +43,7 @@ const Testimonial = () => {
           This Guest House is awsome .
           if visiting Goa i would suggest
           you to choose this guest house.
-          The staff is amazing specially a bold headed 
+          The staff is amazing specially
           guy called Leander.
         </p>
         <div className='testimonial_img'>
@@ -58,7 +58,7 @@ const Testimonial = () => {
         <p>This Guest House is awsome .
           if visiting Goa i would suggest 
           you to choose this guest house.
-          The staff is amazing specially a bold headed 
+          The staff is amazing specially 
           guy called Leander.
         </p>
         <div className='testimonial_img'>
@@ -73,7 +73,7 @@ const Testimonial = () => {
         <p>This Guest House is awsome .
           if visiting Goa i would suggest 
           you to choose this guest house.
-          The staff is amazing specially a bold headed 
+          The staff is amazing specially  
           guy called Leander.
         </p>
         <div className='testimonial_img'>
@@ -88,7 +88,7 @@ const Testimonial = () => {
         <p>This Guest House is awsome .
           if visiting Goa i would suggest 
           you to choose this guest house.
-          The staff is amazing specially a bold headed 
+          The staff is amazing specially 
           guy called Leander.
         </p>
         <div className='testimonial_img'>

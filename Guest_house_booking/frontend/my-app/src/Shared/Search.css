@@ -3,7 +3,7 @@
   align-items: center; /* Align items vertically in the flex container */
   padding: 1rem;
   border-radius: 15px;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 2px;
   width: max-content;
   margin-top: 50px;
   background-color: #ffffff; /* Add a background color for better visibility */
@@ -13,6 +13,7 @@
   margin-bottom: 1rem; /* Add some spacing between form groups */
   display: flex;
   align-items: center; /* Align items vertically in the flex container */
+
 }
 
 .form_group span {
@@ -29,6 +30,7 @@
   padding: 0.5rem; /* Add some padding for better input appearance */
   border-radius: 8px; /* Add a slight border radius to the input */
   background-color: #8abbec; /* Add a light background color */
+  box-shadow: rgba(17, 12, 46, 0.15) 20px 10px 20px 30px;
 }
 
 .form_group input:focus {
