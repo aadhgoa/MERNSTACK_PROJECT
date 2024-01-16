@@ -120,3 +120,17 @@ room_info h5{
 .review_item span {
   font-weight: 500;
 }
+
+@media only screen and (max-width:768px){
+  .Room-extra-details{
+    flex-wrap: wrap ;
+    row-gap: 1rem;
+  }
+  .Room-extra-details span{
+    font-size: 0.9rem;
+
+  }
+  .Room-extra-details span  i {
+    font-size: 1rem;
+  }
+}

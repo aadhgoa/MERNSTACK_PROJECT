@@ -7,15 +7,25 @@ import Search from './../Shared/Search'
 import Newsletter from './../Shared/Newsletter'
 import { Container, Row, Col} from 'reactstrap';
 import {useState, useEffect} from 'react'
+import useFetch from '../hooks/usefetch';
+import { BASE_URL } from '../utils/config';
+
+
 
 const Room = () => {
   const [pageCount, setPageCount] = useState(0);
   const [page, setPage] = useState(0);
+  const {data:rooms,loading, error }=useFetch(`${BASE_URL}/rooms?page=${page}`)
+  const {data:RoomCount}=useFetch(`${BASE_URL}/rooms/search/getRoomCount`)
+
 
   useEffect(()=>{
-    const pages = Math.ceil(5 / 8); //later we will use backend data
+    const pages = Math.ceil(RoomCount / 8); //later we will use backend data
     setPageCount(pages);
-  }, [page]);
+    window.scrollTo(0,0)
+  }, [page, RoomCount, rooms]);
+
+  
 
   return (
    <>
@@ -29,9 +39,18 @@ const Room = () => {
    </section>
    <section className='pt-0'>
     <Container>
-      <Row>
+      {
+      !loading && <h4 className='text-center pt-5'>Loading....</h4>
+      }
+      {
+        error && <h4 className='text-center pt-5'>{error}</h4>
+      }
+      {
+        !loading && 
+        !error &&
+        <Row>
         {
-          RoomData?.map(room=> (<Col lg='3' key={room.id} >
+          rooms?.map(room=> (<Col lg='3' md="6" sm="6" key={room._id} >
             <RoomCard room={room}></RoomCard>
           </Col>
           ))}
@@ -47,6 +66,7 @@ const Room = () => {
           ))}
           </div></Col>
       </Row>
+      }
     </Container>
    </section>
    <Newsletter/>

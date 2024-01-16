@@ -1,4 +1,4 @@
-.thank-you span i{
+/* .thank-you span i{
   font-size: 4rem;
   color: green;
 
@@ -8,4 +8,44 @@
 .thank-you h1{
   font-size: 3.6rem;
   font-family:cursive;
+} */
+
+/* styles/Thankyou.css */
+
+.thank-you {
+  text-align: center;
+  padding: 50px;
+  background-color: #f8f9fa; /* Light background color */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you span i {
+  font-size: 4rem;
+  color: #28a745; /* Green color */
+}
+
+.thank-you h1 {
+  font-size: 3.6rem;
+  font-family: 'cursive', sans-serif;
+  color: #333; /* Dark text color */
+}
+
+.thank-you h3 {
+  font-size: 2rem;
+  color: #495057; /* Dark gray color */
+}
+
+.primary-btn {
+  background-color: #000000; /* Primary button color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
 }

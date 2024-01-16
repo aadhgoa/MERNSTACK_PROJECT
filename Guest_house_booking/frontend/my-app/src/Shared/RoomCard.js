@@ -7,7 +7,7 @@ import calculateAvgRating from '../utils/avgRating'
 
 const RoomCard = ({room}) => {
 
-  const {id,Rooms,images,costPerDay,featured,reviews} = room;
+  const {_id,Rooms,images,costPerDay,featured,reviews} = room;
   const {totalRating,avgRating} = calculateAvgRating(reviews)
 
   return (
@@ -26,17 +26,17 @@ const RoomCard = ({room}) => {
           {totalRating === 0 ? (
             'Not rated'
             ) : (
-            <span>({reviews.length})</span>
+            <span>({reviews?.length})</span>
           )}
           
           </span>
         </div>
-        <h5 className='room_title'><Link to={`/rooms/${id}`}>{Rooms}</Link></h5>
+        <h5 className='room_title'><Link to={`/rooms/${_id}`}>{Rooms}</Link></h5>
         <div className='card_bottom a b d-flex align-items-center 
         justify-content-between mt-3'>
           <h5>Rs.{costPerDay}<span>/Room</span></h5>
           <button className='btn booking_btn'>
-            <Link className='Link' to={`/rooms/${id}`}>Book Now</Link>
+            <Link className='Link' to={`/rooms/${_id}`}>Book Now</Link>
           </button>
         </div>
       </CardBody>

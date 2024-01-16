@@ -40,11 +40,10 @@ const Home = () => {
           <Col lg='6'>
             <div className='Room-Content'>
               <div className="Room_subtitle d-flex align-item-center">
-                <Subtitle subtitle={"know Before you go"}/>
+                <Subtitle subtitle={"know Before you Come"}/>
                 <img src={Globe} alt=""/>
               </div>
-              <h1>Best Guest House Here 
-                 <span className='highlight'> memories</span> </h1>
+              <h1>Best Guest House Here.</h1><br></br>
                 <p>"Step into a world of comfort and style with our meticulously designed rooms that redefine luxury living. 
                   Each space is a harmonious blend of modern elegance and thoughtful functionality, 
                   offering a sanctuary where relaxation meets sophistication. Immerse yourself in the plush ambiance of our well-appointed rooms,
@@ -63,7 +62,7 @@ const Home = () => {
       </Col>
       <Col lg='2'>
         <div
-          className='room_img_box'
+          className='room_img_box hero_video_box mt-4'
           onMouseOver={() => handleHover(videoRef2)}
           onMouseOut={() => handleMouseOut(videoRef2)}
         >

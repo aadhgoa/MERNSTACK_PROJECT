@@ -39,3 +39,24 @@
   padding: 0.5rem 1.5rem !important;
   background: #556eea !important;
 }
+
+@media only screen and (max-width: 922px){
+  .newsletter_content h2{
+    font-size: 2rem;
+  }
+  .newsletter_img{
+    display: none;
+
+  }
+}
+
+@media only screen and (max-width:576){
+  .newsletter_content h2{
+    font-size: 1.5rem;
+  }
+
+ 
+  .newsletter_content{
+    display: none;
+  }
+}

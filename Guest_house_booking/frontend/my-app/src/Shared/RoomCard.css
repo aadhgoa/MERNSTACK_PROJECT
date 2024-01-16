@@ -1,22 +1,19 @@
-.room_img img{
+/* RoomCard.css */
+
+.room_card {
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.room_card img {
   width: 100%;
   border-radius: 5px 5px 0 0;
-
-
 }
 
-.card{
-  border: none !important;
-  box-shadow: rgb(0, 0, 0, 0.2) 20px 20px 60px 30px;
-
-
-}
-
-.room_img{
+.room_card .room_img {
   position: relative;
 }
 
-.room_img span{
+.room_card .room_img span {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -27,61 +24,70 @@
   color: #fff;
   padding: 0.3rem 0.5rem;
   border-radius: 3px 0 0 0;
-
 }
 
-.card_top span i{
-  color: var(--secondary-color);
-
-
-}
-.room_rating{
-  font-size: 0.9rem;
-  color: var(--text-color);
+.room_card .card_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.room_title{
+.room_card .room_rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.room_card .room_title {
   margin-top: 1rem;
   font-size: 1.1rem;
-  cursor: pointer;
 }
 
-.room_title a{
+.room_card .room_title a {
   text-decoration: none;
   color: var(--heading-color);
-  transition: 0.3s;
-
+  transition: color 0.3s ease;
 }
-.room_title :hover{
+
+.room_card .room_title:hover a {
   color: blue;
 }
 
-.card_bottom h5{
-  color: rgb(37, 37, 209)73, 73, 240;
-  font-size: 1.1rem;
-  font-weight: 700;
-  
-}
- 
-.card_bottom h5 span{
-  font-weight: 500;
-  color: rgb(5, 13, 245);
-  font-size: 0.8rem;
+.room_card .card_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
 }
 
-.booking_btn{
+.room_card .booking_btn {
   background: rgb(85, 85, 226) !important;
   cursor: pointer;
   padding: 0.2rem 0.5rem !important;
-
 }
 
-.Link{
+.room_card .Link {
   color: white;
   text-decoration: none;
   font-size: 0.9rem;
 }
 
-.Link:hover{
+.room_card .Link:hover {
   color: #fff;
+}
+
+@media only screen and (max-width:576px){
+  .room_title h1{
+    font-size: 1rem;
+  }
+  .booking_btn{
+    font-size: 0.8rem;
+  }
+  .booking_btn{
+    padding: 0.2rem 0.5rem !important ;
+  }
+  .room_rating{
+    font-size: .8rem;
+    
+  }
 }

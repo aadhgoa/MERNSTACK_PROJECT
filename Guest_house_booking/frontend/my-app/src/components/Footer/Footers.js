@@ -62,7 +62,7 @@ const Footers = () => {
               </div>
             </div>
           </Col>
-          <Col lg='3'>
+          <Col lg='2'>
             <h5 className='foot_link-title'>discover</h5>
             <ListGroup className='footer_quick-links'>
               {
@@ -74,7 +74,7 @@ const Footers = () => {
               }
             </ListGroup>
           </Col>
-          <Col lg='3'>
+          <Col lg='2'>
           <h5 className='foot_link-title'>Quick Links</h5>
             <ListGroup className='footer_quick-links'>
               {
@@ -86,7 +86,7 @@ const Footers = () => {
               }
             </ListGroup>
           </Col>
-          <Col lg='3'>
+          <Col lg='4'>
             <h5 className='footer_link-title'>Contact</h5>
               <ListGroup className='footer_quick-links'>
                 <ListGroupItem className='ps-0 border-0 d-flex align-item-center gap-3'>
@@ -97,11 +97,11 @@ const Footers = () => {
                   <p className='mb-0'>Majorda, goa</p>
                 </ListGroupItem>
                 <ListGroupItem className='ps-0 border-0 d-flex align-item-center gap-3'>
-                  <h6 className='mb-0 d-flex align-items-center gap-2'>
+                  <h6 className='mb- d-flex align-items-center gap-2'>
                     <span><i className="ri-mail-line"></i></span>
                     Email:
                   </h6>
-                  <p className='mb-0'>baswarajchowdhari92@gmail.com</p>
+                  <p className='mb-0'>Leanderperiera123@gmail.com</p>
                 </ListGroupItem>
                 <ListGroupItem className='ps-0 border-0 d-flex align-item-center gap-3'>
                   <h6 className='mb-0 d-flex align-items-center gap-2'>

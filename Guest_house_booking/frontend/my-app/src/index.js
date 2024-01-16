@@ -9,15 +9,19 @@ import 'remixicon/fonts/remixicon.css'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
+import { AuthContextProvide } from './context/AuthContext';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     
     <React.StrictMode>
+        <AuthContextProvide>
         <BrowserRouter>
         <App></App>
         </BrowserRouter>
+        </AuthContextProvide>
     </React.StrictMode>
     
  

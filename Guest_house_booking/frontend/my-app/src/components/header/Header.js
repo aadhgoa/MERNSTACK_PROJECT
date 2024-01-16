@@ -1,11 +1,9 @@
-// Header.js
-
-import React, { useEffect, useRef } from 'react';
-import { Container, Row,  } from 'reactstrap';
-import { NavLink, Link } from 'react-router-dom';
+import React, { useContext, useEffect, useRef } from 'react';
+import { Container, Row } from 'reactstrap';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import logo from '../../images/Guesthouselogo.jpeg';
-import './Header.css'; // Corrected import path
-
+import './Header.css';
+import { AuthContext } from './../../context/AuthContext.js';
 
 const nav_links = [
   {
@@ -24,49 +22,50 @@ const nav_links = [
 
 const Header = () => {
   const headerRef = useRef(null);
+  const menuRef = useRef(null);
+  const { user, dispatch } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  const stickyHeaderFunc = () => {
-    const handleScroll = () => {
-      if (window.scrollY > 80) {
-        headerRef.current.classList.add('sticky_header');
-      } else {
-        headerRef.current.classList.remove('sticky_header');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+  const logout = () => {
+    dispatch({ type: 'LOGOUT' });
+    navigate('/');
   };
 
-  useEffect(() => {
+  const stickyHeaderFunc = ()=>{
+
+    window.addEventListener("scroll", ()=>{
+      if(
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ){
+        headerRef.current.classList.add("sticky_header");
+      }else{
+        headerRef.current.classList.remove("sticky_header");
+      }
+    });
+  }
+
+  useEffect(()=>{
     stickyHeaderFunc();
-    // Cleanup the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', stickyHeaderFunc);
-    };
-  }, []); //
+
+    return window.removeEventListener("scroll", stickyHeaderFunc)
+  })
+
+  const toggleMenu = ()=> menuRef.current.classList.toggle("show_menu")
+
   return (
     <header className='header' ref={headerRef}>
       <Container>
         <Row>
           <div className='nav-Wrap d-flex align-items-center justify-content-between'>
-            {/* =============== logo ================ */}
             <div className='logo'>
               <img src={logo} alt='' />
             </div>
-            {/* =============== logo end ================ */}
-            <div className='navigation'>
+            <div className='navigation' ref={menuRef} onClick={toggleMenu}>
               <ul className='menu d-flex align-items-center gap-5'>
                 {nav_links.map((item, index) => (
                   <li className='nav_item' key={index}>
-                    <NavLink
-                      to={item.path}
-                      activeClassName='active_link' // Use activeClassName for active styles
-                    >
+                    <NavLink to={item.path} activeClassName='active_link'>
                       {item.display}
                     </NavLink>
                   </li>
@@ -75,14 +74,25 @@ const Header = () => {
             </div>
             <div className='nav_right d-flex align-items-center gap-4'>
               <div className='nav_btns d-flex align-items-center gap-4'>
-                <button className='btnlog'>
-                  <Link to='/login'>Login</Link>
-                </button>
-                <button className='btnReg'>
-                  <Link to='/register'>Register</Link>
-                </button>
+                {user ? (
+                  <div>
+                    <h5 className='mb-0'>{user.username}</h5>
+                    <button className='btn btn-dark' onClick={logout}>
+                      Logout
+                    </button>
+                  </div>
+                ) : (
+                  <div>
+                    <button className='btnlog'>
+                      <Link to='/login'>Login</Link>
+                    </button>
+                    <button className='btnReg'>
+                      <Link to='/register'>Register</Link>
+                    </button>
+                  </div>
+                )}
               </div>
-              <span className='mobile_menu'>
+              <span className='mobile_menu' onClick={toggleMenu}>
                 <i className='ri-menu-line'></i>
               </span>
             </div>

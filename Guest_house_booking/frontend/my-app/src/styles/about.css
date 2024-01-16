@@ -1,0 +1,22 @@
+/* Add this to your existing styles or create a new CSS file */
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #2d3e50;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #54667a;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Feel free to adjust colors and styles based on your design preferences */

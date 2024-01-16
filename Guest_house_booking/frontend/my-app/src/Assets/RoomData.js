@@ -7,7 +7,7 @@ import roomImg4 from "../images/Room4H1.jpg";
 
 const RoomData = [
   { id:1,
-    Rooms: "Deluxe",
+    Rooms: "Deluxe1",
     adults: 2,
     images: roomImg1,
     costPerDay: 2500,
@@ -28,7 +28,7 @@ const RoomData = [
     featured: false
   },
   { id:2,
-    Rooms: "Standard",
+    Rooms: "Standard1",
     adults: 2,
     images:  roomImg2, 
     costPerDay: 2500,
@@ -39,7 +39,7 @@ const RoomData = [
     featured: true
   },
   { id:3,
-    Rooms: "Standard",
+    Rooms: "Standard2",
     adults: 2,
     images: roomImg3,
     costPerDay: 2500,
@@ -50,7 +50,7 @@ const RoomData = [
     featured: true
   },
   { id:4,
-    Rooms: "Deluxe",
+    Rooms: "Deluxe2",
     adults: 2,
     images: roomImg4,
     costPerDay: 2500,
