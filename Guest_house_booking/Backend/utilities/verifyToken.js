@@ -1,11 +1,14 @@
 import  jwt  from "jsonwebtoken";
 
 const verifytoken = (req,res,next)=>{
-  const token = req.cookies.accessToken
+  const token = req.header["Authorization"]
+
 
   if(!token){
+    
 
-    return res.status(401).json({success:false, message:"You are not auhtorized"})
+    return res.status(401).json({success:false, message:"You are not auhtorized nop token provided" })
+
   }
 
   //if token exist then verify the token
@@ -33,7 +36,7 @@ export const verifyUser = (req,res,next)=>{
     if(req.user.id === res.params.id || req.user.role === 'admin'){
       next()
     }else{
-      return res.status(401).json({success:false, message:"You are not authenticated"})
+      return res.status(401).json({success:false, message:"You are not authenticated as user"})
     }
   });
 }
@@ -42,7 +45,7 @@ export const verifyUser = (req,res,next)=>{
       if(req.user.role === 'admin'){
         next()
       }else{
-        return res.status(401).json({success:false, message:"You are not authorized"})
+        return res.status(401).json({success:false, message:"You are not authorized as admin"})
       }
     });
   }

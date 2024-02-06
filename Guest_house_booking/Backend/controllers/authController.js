@@ -61,7 +61,7 @@ export const login = async(req,res)=>{
 
       //create jwt token
       const token = Jwt.sign(
-        {id:user._id, role:user._role}, 
+        {id:user._id, role:user.role}, 
         process.env.JWT_SECRET_KEY,
         {expiresIn:"15d"}
         );
@@ -81,8 +81,6 @@ export const login = async(req,res)=>{
 
       }catch (error) {
         res.status(500).json({ success:false, message: "failed to login"})
-
-
     
   }
 }

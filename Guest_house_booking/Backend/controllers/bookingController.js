@@ -42,3 +42,13 @@ export const getAllBooking = async(req,res)=>{
   }
 }
 
+
+export const getAllBookingUserspecific = async (req, res) => {
+  try {
+    const userId = req.user_id; // Assuming user ID is stored in the token
+    const bookings = await booking.find({ userId });
+    res.status(200).json({ success: true, message: "Success", data: bookings });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Internal server error" });
+  }
+};

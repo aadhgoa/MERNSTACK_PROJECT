@@ -8,6 +8,8 @@ import RoomDetails from '../Pages/RoomDetails';
 import SearchResults from '../Pages/SearchResults';
 import Thankyou from '../Pages/Thankyou';
 import About from '../Pages/About';
+import MyAccount from '../Pages/MyAccount';
+
 
 const Routers = () => {
   return (
@@ -21,6 +23,8 @@ const Routers = () => {
       <Route path='/login' element={<Login />} />
       <Route path='/rooms/search' element={<SearchResults />} />
       <Route path='/about' element={<About></About>}/>
+      <Route path='/MyAccount' element={<MyAccount/>}/>
+
     </Routes>
   );
 };

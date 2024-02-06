@@ -18,6 +18,10 @@ const nav_links = [
     path: '/rooms',
     display: 'Room',
   },
+  {
+    path:'/MyAccount',
+    display: 'MyAccount'
+  }
 ];
 
 const Header = () => {

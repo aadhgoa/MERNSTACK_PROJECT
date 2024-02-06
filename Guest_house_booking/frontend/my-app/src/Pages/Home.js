@@ -8,7 +8,7 @@ import Globe from '../images/glob.avif'
 import Subtitle from './../Shared/Subtitle';
 import Search from '../Shared/Search'
 import 'remixicon/fonts/remixicon.css'
-import ServicesList from '../services/serviceList'
+// import ServicesList from '../services/serviceList'
 import FeaturedRoomList from '../components/Featured-Rooms/FeaturedRoomList'
 import experienceImg from '../images/experience.avif'
 import Fullguesthosuepic from '../images/Fullguesthosuepic.jpg'
@@ -89,7 +89,6 @@ const Home = () => {
           <h5 className='service_title'>What we Serve</h5>
           <h2 className='service_subtitle'>We Offer our best services</h2>
         </Col>
-        <ServicesList />
         </Row>
       </Container>
     </section>
