@@ -1,13 +1,12 @@
 import  jwt  from "jsonwebtoken";
 
 const verifytoken = (req,res,next)=>{
-  const token = req.header["Authorization"]
-
+  const token = req.headers['authorization'];
 
   if(!token){
     
 
-    return res.status(401).json({success:false, message:"You are not auhtorized nop token provided" })
+    return res.status(401).json({success:false, message:"You are not auhtorized not token provided" })
 
   }
 
@@ -16,6 +15,8 @@ const verifytoken = (req,res,next)=>{
 
   jwt.verify(token, process.env.JWT_SECRET_KEY, (err, user)=>{
   if(err){
+      console.error(err);
+      
   return res.status(401).json({success:false, message:"token is invalid"})
 
   }
