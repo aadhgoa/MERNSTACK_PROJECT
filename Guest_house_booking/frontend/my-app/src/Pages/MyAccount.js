@@ -10,14 +10,19 @@ const MyAccount = () => {
 
   useEffect(() => {
     const fetchBookings = async () => {
-      try {
-        const token = localStorage.getItem('accessToken');
-        const response = await fetch(`${BASE_URL}/booking`, {
+        try {
+            const token = localStorage.getItem('access_token');
+            if (!token) {
+                console.error('Access token is missing.');
+                // Handle the absence of the access token, e.g., redirect to login page
+                return;
+            }
+          const response = await fetch(`${BASE_URL}/booking`, {
           method: "GET",
           headers: {
-            "Authorization": token,
-            "content-type": "application/json",
-          },
+            "Authorization": `${token}`, 
+            "Content-Type": "application/json",
+            }
 
 
         });
