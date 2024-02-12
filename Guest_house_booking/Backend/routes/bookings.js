@@ -8,7 +8,7 @@ import { createbooking, getAllBooking, getAllBookingUserspecific, getSingleBooki
  router.post('/',verifyUser,createbooking)
  router.get("/:id", verifyUser, getSingleBooking)
  router.get("/", verifyUser, getAllBooking)
- router.get("/:id", verifyUser, getAllBookingUserspecific)
+ router.get("/user/:id", verifyUser, getAllBookingUserspecific)
 
 
 

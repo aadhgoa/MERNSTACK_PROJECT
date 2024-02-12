@@ -70,7 +70,7 @@ export const login = async(req,res)=>{
         //set token in th browser cookies and send th ereporsne to thhe client
 
         res.cookie("accessToken", token,{
-          httpOnly: true,
+          httpOnly: false,
           expires:token.expiresIn,
 
          }).status(200).json({
