@@ -16,15 +16,19 @@ const MyAccount = () => {
         console.log(cookies)
         const accessTokenCookie = cookies.find(cookie => cookie.startsWith('accessToken='));
         const accessToken = accessTokenCookie ? accessTokenCookie.split('=')[1] : undefined;
-          
-
+        
+        const user_str = localStorage.getItem('user')
+        const user_obj = JSON.parse(user_str)
+        const id = user_obj["_id"]
+        console.log(id)
         console.log(accessToken)
         if (!accessToken) {
           console.error('Access token is missing.');
           // Handle the absence of the access token, e.g., redirect to login page
           return;
         }
-        const response = await fetch(`${BASE_URL}/booking`, {
+        console.log(`${BASE_URL}/booking/${id}`)
+        const response = await fetch(`${BASE_URL}/booking/user/${id}`, {
           method: "GET",
           headers: {
             "Authorization": `${accessToken}`,

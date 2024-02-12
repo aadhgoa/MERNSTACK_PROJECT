@@ -45,7 +45,8 @@ export const getAllBooking = async(req,res)=>{
 
 export const getAllBookingUserspecific = async (req, res) => {
   try {
-    const userId = req.user_id; // Assuming user ID is stored in the token
+    console.log(req.params.id)
+    const userId = req.params.id; // Assuming user ID is stored in the token
     const bookings = await booking.find({ userId });
     res.status(200).json({ success: true, message: "Success", data: bookings });
   } catch (error) {
