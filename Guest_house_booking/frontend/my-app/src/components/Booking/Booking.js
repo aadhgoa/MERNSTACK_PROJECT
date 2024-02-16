@@ -42,7 +42,16 @@ const Booking = ({ room, avgRating }) => {
   };
 
   const ServiceFee = 50;
-  const totalAmount = Number(costPerDay) * Number(booking.guestSize) + Number(ServiceFee);
+  // const totalAmount = Number(costPerDay) * Number(booking.guestSize) + Number(ServiceFee);
+  let totalAmount;
+
+if (Number(booking.guestSize) <= 2) {
+  totalAmount = Number(costPerDay) + Number(ServiceFee);
+} else {
+  totalAmount = Number(costPerDay) + (Number(booking.guestSize) - 2) * 1000 + Number(ServiceFee);
+}
+
+
 
   // send data to the server
   const handleClick = async (e) => {
@@ -50,13 +59,23 @@ const Booking = ({ room, avgRating }) => {
 
     console.log(booking);
 
+    // /
+
     try {
       if (!user || user === undefined || user === null) {
         return alert('Please sign in');
       }
+      const accessToken = document.cookie.split('; ').find(cookie => cookie.startsWith('accessToken='));
+      const id = JSON.parse(localStorage.getItem('user'))?._id;
+
+      if (!accessToken) {
+        console.error('Access token is missing.');
+        return;
+      }
       const res = await fetch(`${BASE_URL}/booking`, {
-        method: 'post',
+        method: 'POST',
         headers: {
+          "Authorization": accessToken.split('=')[1],
           'content-type': 'application/json',
         },
         credentials: 'include',
@@ -76,7 +95,7 @@ const Booking = ({ room, avgRating }) => {
     <>
       <div className='booking'>
         <div className='booking_top d-flex align-items-center justify-content-between'>
-          <h3>Rs.{costPerDay} <span>/Person</span></h3>
+          <h3>Rs.{costPerDay} <span>/Apartment</span></h3>
           <span className='room_rating d-flex align-items-center'>
             <i className='ri-star-s-fill'></i>
             {avgRating === 0 ? null : avgRating} ({reviews?.length})

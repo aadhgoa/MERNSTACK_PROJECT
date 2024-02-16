@@ -109,7 +109,7 @@ const {data:room, loading, error} = useFetch(`${BASE_URL}/rooms/${id}`)
 
               </div>
               <div className='Room-extra-details'>
-                <span><i class="ri-money-rupee-circle-fill"></i>Rs.{costPerDay} Per Person</span>
+                <span><i class="ri-money-rupee-circle-fill"></i>Rs.{costPerDay} Per Apartment</span>
                 <span><i class="ri-group-line"></i>{Maxpeople}</span>
               </div>
               <h5>Description</h5>
