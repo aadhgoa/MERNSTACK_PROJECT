@@ -45,10 +45,26 @@ export const getAllBooking = async(req,res)=>{
 
 export const getAllBookingUserspecific = async (req, res) => {
   try {
-    const userId = req.user_id; // Assuming user ID is stored in the token
+    console.log(req.params.id)
+    const userId = req.params.id; // Assuming user ID is stored in the token
     const bookings = await booking.find({ userId });
     res.status(200).json({ success: true, message: "Success", data: bookings });
   } catch (error) {
     res.status(500).json({ success: false, message: "Internal server error" });
+  }
+};
+
+export const bookingDate = async(req,res)=>{
+  try {
+    const { roomName } = req.params;
+    // Query the database to find all bookings for the specified room
+    const bookings = await booking.find({ roomName });
+    // Extract booked dates from the bookings
+    const bookedDates = bookings.map((booking) => booking.bookAt.toISOString().split('T')[0]);
+    // Return the booked dates as a response
+    res.status(200).json({ success: true, bookedDates });
+  } catch (error) {
+    console.error('Error retrieving booked dates:', error);
+    res.status(500).json({ success: false, message: 'Internal server error' });
   }
 };
